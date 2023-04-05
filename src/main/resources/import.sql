@@ -14,3 +14,17 @@ INSERT INTO tb_event(name, date, url, city_id) VALUES ('Feira do Software', '202
 INSERT INTO tb_event(name, date, url, city_id) VALUES ('CCXP', '2021-04-13', 'https://ccxp.com.br', 1);
 INSERT INTO tb_event(name, date, url, city_id) VALUES ('Congresso Linux', '2021-05-23', 'https://congressolinux.com.br', 2);
 INSERT INTO tb_event(name, date, url, city_id) VALUES ('Semana Spring React', '2021-05-03', 'https://devsuperior.com.br', 3);
+
+INSERT INTO tb_roles(id, authority) VALUES (1, 'OPERATOR');
+INSERT INTO tb_roles(id, authority) VALUES (2, 'ADMIN');
+
+INSERT INTO tb_users(id, email, password) VALUES (1, 'ana@gmail.com', '123456');
+INSERT INTO tb_users(id, email, password) VALUES (2, 'bob@gmail.com', '123456');
+
+INSERT INTO tb_users_roles(users_id, roles_id) VALUES (1, 1);
+INSERT INTO tb_users_roles(users_id, roles_id) VALUES (2, 1);
+INSERT INTO tb_users_roles(users_id, roles_id) VALUES (2, 2);
+
+
+
+
