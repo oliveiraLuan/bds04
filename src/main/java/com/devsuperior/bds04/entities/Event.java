@@ -1,6 +1,8 @@
 package com.devsuperior.bds04.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -13,8 +15,10 @@ public class Event {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@NotBlank
 	private String name;
 	private LocalDate date;
+	@NotNull
 	private String url;
 	
 	@ManyToOne
@@ -50,10 +54,6 @@ public class Event {
 
 	public LocalDate getDate() {
 		return date;
-	}
-
-	public void setDate(LocalDate date) {
-		this.date = date;
 	}
 
 	public String getUrl() {
